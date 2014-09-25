@@ -1,0 +1,8 @@
+{
+    "name": "debug",
+    "main": "src/debug.js",
+    "ignore": [
+        ".jshintrc",
+        ".gitignore"
+    ]
+}
