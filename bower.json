@@ -1,6 +1,6 @@
 {
-    "name": "debug",
-    "main": "src/debug.js",
+    "name": "debug-wrap",
+    "main": "src/debug-wrap.js",
     "ignore": [
         ".jshintrc",
         ".gitignore"

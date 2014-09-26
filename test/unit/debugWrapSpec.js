@@ -1,26 +1,21 @@
-describe('debug', function () {
+describe('debug-wrap', function () {
 
     var console = window.console,
-        debugLogger,
+        debugWrap,
         debug,
-        context = 0,
-        contextRequire;
+        context = 0;
 
     function configRequire() {
-        contextRequire = require.config({
+        return require.config({
             baseUrl: '/base/src',
             context: 'context' + (context++).toString()
         });
-        return contextRequire;
     }
 
     function loadDebugModule(done) {
-        var ogRequire = contextRequire;
-        var require = configRequire();
-
-        require(['debug'], function (_debug_) {
-            debugLogger = _debug_;
-            debug = debugLogger('unit-test');
+        configRequire()(['debug-wrap'], function (_debugWrap_) {
+            debugWrap = _debugWrap_;
+            debug = debugWrap('unit-test');
             done();
         });
     }
@@ -40,7 +35,7 @@ describe('debug', function () {
 
     describe('can be loaded', function () {
         it('as a require module', function (done) {
-            configRequire()(['debug'], function (debug) {
+            loadDebugModule(function() {
                 expect(debug).toBeDefined();
                 expect(debug).not.toBeNull();
 
@@ -50,7 +45,7 @@ describe('debug', function () {
 
         it('on the global scope', function (done) {
             var script = document.createElement('script');
-            script.src = '/base/src/debug.js';
+            script.src = '/base/src/debug-wrap.js';
             script.onload = function onload() {
                 expect(window.debug).toBeDefined();
                 expect(window.debug).not.toBeNull();

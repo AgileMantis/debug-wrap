@@ -114,7 +114,7 @@
     if (hasModule) {
         global.module.exports = debug;
     } else if (typeof(global.define) === 'function' && define.amd) {
-        global.define('debug', [], debug);
+        global.define('debug-wrap', [], debug);
     }
 
 }(this));
