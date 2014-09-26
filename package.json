@@ -1,19 +1,20 @@
 {
-    "name": "debug",
-    "version": "1.0.0",
+    "name": "debug-wrap",
+    "version": "1.0.1",
     "description": "Provides a safe way of abstracting access to the console object, as well as a way to prefix console messages on a per-module basis",
     "keywords": [
         "debug",
+        "debug-wrap",
         "console",
         "logging"
     ],
-    "homepage": "https://github.com/DanielSchaffer/debug",
-    "bugs": "https://github.com/DanielSchaffer/debug/issues",
+    "homepage": "https://github.com/DanielSchaffer/debug-wrap",
+    "bugs": "https://github.com/DanielSchaffer/debug-wrap/issues",
     "license": "MIT",
-    "main": "src/debug.js",
+    "main": "src/debug-wrap.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/DanielSchaffer/debug.git"
+        "url": "https://github.com/DanielSchaffer/debug-wrap.git"
     },
     "devDependencies": {
 
@@ -28,7 +29,7 @@
         "karma-jasmine": "0.2.2",
         "karma-requirejs": "0.2.2",
 
-        "karma-phantomjs-launcher": "1.9.10",
+        "karma-phantomjs-launcher": "0.1.4",
 
         "grunt-karma": "0.9.0"
     }

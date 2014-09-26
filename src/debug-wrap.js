@@ -11,7 +11,7 @@
 
     // this implementation does not store logs to be recalled later
     // if this functionality is desired, take a look at the setCallback functionality here: http://benalman.com/projects/javascript-debug-console-log/
-    function debug() {
+    function debugWrap() {
         var con = global.console,
             filters = global.__debugFilter,
             isRegExpFilter = /^\//,
@@ -109,12 +109,12 @@
         return debugLogger;
     }
 
-    global.debug = debug;
+    global.debugWrap = debugWrap;
 
     if (hasModule) {
-        global.module.exports = debug;
+        global.module.exports = debugWrap;
     } else if (typeof(global.define) === 'function' && define.amd) {
-        global.define('debug', [], debug);
+        global.define('debug-wrap', [], debugWrap);
     }
 
 }(this));
