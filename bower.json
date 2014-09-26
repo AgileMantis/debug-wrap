@@ -1,6 +1,7 @@
 {
     "name": "debug-wrap",
     "main": "src/debug-wrap.js",
+    "moduleType": ["amd", "node", "global"],
     "ignore": [
         ".jshintrc",
         ".gitignore"
