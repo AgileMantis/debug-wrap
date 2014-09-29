@@ -1,5 +1,5 @@
 /* debug.js
- * version: 0.1.0
+ * version: 1.0.3
  * author: Daniel Schaffer/GSN Social
  * license: MIT
  * https://github.com/DanielSchaffer/debug
@@ -114,7 +114,7 @@
     if (hasModule) {
         global.module.exports = debug;
     } else if (typeof(global.define) === 'function' && define.amd) {
-        global.define('debug-wrap', [], debug);
+        global.define('debug', [], debug);
     }
 
 }(this));
