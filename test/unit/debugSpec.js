@@ -13,7 +13,7 @@ describe('debug-wrap', function () {
     }
 
     function loadDebugModule(done) {
-        configRequire()(['debug-wrap'], function (_debugWrap_) {
+        configRequire()(['debug'], function (_debugWrap_) {
             debugWrap = _debugWrap_;
             debug = debugWrap('unit-test');
             done();
@@ -45,7 +45,7 @@ describe('debug-wrap', function () {
 
         it('on the global scope', function (done) {
             var script = document.createElement('script');
-            script.src = '/base/src/debug-wrap.js';
+            script.src = '/base/src/debug.js';
             script.onload = function onload() {
                 expect(window.debug).toBeDefined();
                 expect(window.debug).not.toBeNull();

@@ -1,5 +1,5 @@
 /* debug.js
- * version: 1.0.3
+ * version: 1.0.4
  * author: Daniel Schaffer/GSN Social
  * license: MIT
  * https://github.com/DanielSchaffer/debug

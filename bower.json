@@ -1,8 +1,10 @@
 {
     "name": "debug-wrap",
-    "main": "src/debug-wrap.js",
+    "main": "src/debug.js",
     "ignore": [
         ".jshintrc",
-        ".gitignore"
+        ".gitignore",
+        "debug.iml",
+        "Gruntfile.js"
     ]
 }
